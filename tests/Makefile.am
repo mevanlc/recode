@@ -22,8 +22,8 @@ AUTOMAKE_OPTIONS = gnits
 # matched by the "utf7" regexp.  Try "./pytest -h" for a list of options.
 
 SUITE = t21_names.py t22_lists.py t25_subsets.py t30_base64.py \
-t30_dumps.py t30_quoted.py t40_african.py t40_combine.py t40_testdump.py \
-t40_utf7.py t40_utf8.py t50_methods.py t90_bigauto.py
+t30_dumps.py t30_percent.py t30_quoted.py t40_african.py t40_combine.py \
+t40_testdump.py t40_utf7.py t40_utf8.py t50_methods.py t90_bigauto.py
 
 CYTHON = @CYTHON@
 EXTRA_DIST = Recode.c Recode.pyx pytest common.py asan-suppressions.txt $(SUITE)

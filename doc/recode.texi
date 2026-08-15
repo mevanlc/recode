@@ -188,6 +188,7 @@ All about surfaces
 * Permutations::        Permuting groups of bytes
 * End lines::           Representation for end of lines
 * MIME::                MIME contents encodings
+* Percent encoding::    URL and URI percent encoding
 * Dump::                Interpreted character dumps
 * Test::                Artificial data for testing
 
@@ -4232,6 +4233,7 @@ This chapter presents all surfaces currently available.
 * Permutations::        Permuting groups of bytes
 * End lines::           Representation for end of lines
 * MIME::                MIME contents encodings
+* Percent encoding::    URL and URI percent encoding
 * Dump::                Interpreted character dumps
 * Test::                Artificial data for testing
 @end menu
@@ -4313,7 +4315,7 @@ of various @code{EBCDIC} charsets, or @code{Icon-QNX}.  The recoding of
 end of lines is intimately tied into such charsets, it is not available
 separately as surfaces.
 
-@node MIME, Dump, End lines, Surfaces
+@node MIME, Percent encoding, End lines, Surfaces
 @section MIME contents encodings
 @cindex MIME encodings
 
@@ -4350,7 +4352,23 @@ Internet standards.  MIME changed from a ``Proposed Standard'' (@w{RFC
 and was @emph{recycled} as a ``Draft Standard'' in 1996-11.  It is not yet a
 ``Full Standard''.
 
-@node Dump, Test, MIME, Surfaces
+@node Percent encoding, Dump, MIME, Surfaces
+@section URL and URI percent encoding
+@cindex percent encoding
+@cindex URL encoding
+@cindex URI encoding
+
+The @code{URL} and @code{URI} surfaces encode bytes outside the unreserved
+set of ASCII letters, digits, @code{-}, @code{.}, @code{_}, and @code{~} as
+@code{%} followed by two hexadecimal digits.  Hexadecimal letters generated
+by Recode are uppercase.
+
+The @code{URL} surface additionally represents a space as @code{+}, and
+decodes @code{+} as a space.  The @code{URI} surface instead represents a
+space as @code{%20} and leaves @code{+} unchanged while decoding.  Both
+surfaces accept uppercase and lowercase hexadecimal digits when decoding.
+
+@node Dump, Test, Percent encoding, Surfaces
 @section Interpreted character dumps
 
 @cindex dumping characters

@@ -45,7 +45,7 @@ C_FALLBACKS = flat.c html.c lat1ltex.c lat1btex.c lat1txte.c rfc1345.c texinfo.c
 L_FALLBACKS = ltexlat1.l btexlat1.l txtelat1.l
 
 H_SURFACES = base64.h
-C_SURFACES = base64.c dump.c endline.c permut.c quoted.c
+C_SURFACES = base64.c dump.c endline.c percent.c permut.c quoted.c
 
 recode_SOURCES = main.c mixed.c common.h
 recode_LDADD = librecode.la
@@ -131,7 +131,7 @@ african.lo afrtran.lo atarist.lo bangbang.lo cdcnos.lo \
 ebcdic.lo ibmpc.lo iconqnx.lo lat1asci.lo lat1iso5426.lo lat1ansel.lo \
 java.lo mule.lo strip-data.lo testdump.lo ucs.lo utf16.lo utf7.lo utf8.lo \
 varia.lo vn.lo flat.lo html.lo lat1ltex.lo lat1btex.lo lat1txte.lo rfc1345.lo \
-texinfo.lo base64.lo dump.lo endline.lo permut.lo quoted.lo \
+texinfo.lo base64.lo dump.lo endline.lo percent.lo permut.lo quoted.lo \
 iconv.lo outer.lo: decsteps.h inisteps.h tersteps.h
 
 decsteps.h inisteps.h tersteps.h: stamp-steps
